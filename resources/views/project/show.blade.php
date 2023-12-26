@@ -7,8 +7,8 @@
             <p>{{ $employee->nom }}</p>
         @endforeach
         <div class="mt-4">
-            <a href="{{ route('employee.edit', $project->id) }}" class="text-blue-500 hover:underline mr-2">Modifier</a>
-            <form action="{{ route('employee.destroy', $project->id) }}" method="POST">
+            <a href="{{ route('project.edit', $project->id) }}" class="text-blue-500 hover:underline mr-2">Modifier</a>
+            <form action="{{ route('project.destroy', $project->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="text-red-500 hover:underline">Supprimer</button>
