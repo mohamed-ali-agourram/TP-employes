@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 
@@ -15,3 +16,4 @@ use App\Http\Controllers\EmployeeController;
 */
 
 Route::resource('employee', EmployeeController::class);
+Route::resource('project', ProjectController::class);

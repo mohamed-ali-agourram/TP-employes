@@ -10,4 +10,9 @@ class Employee extends Model
     use HasFactory;
 
     protected $fillable = ["nom", "prenom", "email", "phone", "section", "image"];
+
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'employees_projects');
+    }
 }

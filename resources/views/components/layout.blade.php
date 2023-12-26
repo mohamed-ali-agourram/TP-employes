@@ -17,7 +17,10 @@
 <body class="bg-white">
     <header class="bg-[#333333f0] text-white p-4">
         <h1 class="text-3xl font-bold">Employees</h1>
-        <a class="block mt-4 hover:underline" href="{{ route('employee.index') }}">Tous les employes</a>
+        <div class="flex gap-3">
+            <a class="block mt-4 hover:underline" href="{{ route('employee.index') }}">Employes</a>
+            <a class="block mt-4 hover:underline" href="{{ route('project.index') }}">Projets</a>
+        </div>
     </header>
 
     <main class="flex flex-col container mx-auto p-4">
