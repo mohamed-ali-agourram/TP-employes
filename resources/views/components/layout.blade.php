@@ -20,6 +20,7 @@
         <div class="flex gap-3">
             <a class="block mt-4 hover:underline" href="{{ route('employee.index') }}">Employes</a>
             <a class="block mt-4 hover:underline" href="{{ route('project.index') }}">Projets</a>
+            <a class="block mt-4 hover:underline" href="{{ route('tache.index') }}">Taches</a>
         </div>
     </header>
 

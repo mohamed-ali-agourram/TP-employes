@@ -15,4 +15,9 @@ class Employee extends Model
     {
         return $this->belongsToMany(Project::class, 'employees_projects');
     }
+
+    public function taches()
+    {
+        return $this->hasMany(Tache::class, 'employees_taches');
+    }
 }

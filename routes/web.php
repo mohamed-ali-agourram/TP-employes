@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TacheController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 
@@ -17,3 +18,4 @@ use App\Http\Controllers\EmployeeController;
 
 Route::resource('employee', EmployeeController::class);
 Route::resource('project', ProjectController::class);
+Route::resource('tache', TacheController::class);
