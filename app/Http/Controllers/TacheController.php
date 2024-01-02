@@ -24,9 +24,9 @@ class TacheController extends Controller
     {
         $validatedData = $request->validate([
             'titre' => 'required|max:255',
-            'description' => 'required|max:255',
-            'etat' => 'required|max:255'
+            'description' => 'required|max:255'
         ]);
+        $validatedData["etat"] = "en cours";
         $tache = Tache::create($validatedData);
         $tache->update($validatedData);
 

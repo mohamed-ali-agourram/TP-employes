@@ -50,17 +50,20 @@
                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
             @enderror
         </div>
-        <div class="mb-4">
-            <label for="etat" class="block text-gray-600 font-semibold">Etat</label>
-            <select id="etat" name="etat"
-                class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500">
-                <option value="en cours" @selected($is_update && $tache->etat == 'en cours')>En cours</option>
-                <option value="terminer" @selected($is_update && $tache->etat == 'terminer')>Terminer</option>
-            </select>
-            @error('etat')
-                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-            @enderror
-        </div>
+        @if ($is_update)
+            <div class="mb-4">
+                <label for="etat" class="block text-gray-600 font-semibold">Etat</label>
+                <select id="etat" name="etat"
+                    class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500">
+                    <option value="en cours" @selected($is_update && $tache->etat == 'en cours')>En cours</option>
+                    <option value="terminer" @selected($is_update && $tache->etat == 'terminer')>Terminer</option>
+                </select>
+                @error('etat')
+                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+        @endif
+
         <button class="bg-[#333333f0] mt-3 text-white font-bold py-2 px-4 rounded">
             {{ $is_update ? 'Modifier' : 'Ajouter' }}
         </button>
