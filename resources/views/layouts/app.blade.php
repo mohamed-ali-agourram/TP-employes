@@ -37,18 +37,44 @@
                     <!-- Left Side Of Navbar -->
                     @auth
                         <ul class="navbar-nav me-auto">
-                            <!-- Add links to your routes here -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('employee.index') }}">Employees</a>
+                            <!-- Dropdown for Employees -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="employeeDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Employees
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="employeeDropdown">
+                                    <a class="dropdown-item" href="{{ route('employee.index') }}">Index</a>
+                                    <a class="dropdown-item" href="{{ route('employee.create') }}">Create</a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('project.index') }}">Projects</a>
+
+                            <!-- Dropdown for Projects -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Projects
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="projectDropdown">
+                                    <a class="dropdown-item" href="{{ route('project.index') }}">Index</a>
+                                    <a class="dropdown-item" href="{{ route('project.create') }}">Create</a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('tache.index') }}">Taches</a>
+
+                            <!-- Dropdown for Taches -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="tacheDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Taches
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="tacheDropdown">
+                                    <a class="dropdown-item" href="{{ route('tache.index') }}">Index</a>
+                                    <a class="dropdown-item" href="{{ route('tache.create') }}">Create</a>
+                                </div>
                             </li>
                         </ul>
                     @endauth
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
