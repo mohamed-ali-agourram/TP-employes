@@ -16,6 +16,10 @@ use App\Http\Controllers\EmployeeController;
 |
 */
 
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::resource('employee', EmployeeController::class);
 Route::resource('project', ProjectController::class);
 Route::resource('tache', TacheController::class);
