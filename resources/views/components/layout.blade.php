@@ -17,10 +17,16 @@
 <body class="bg-white">
     <header class="bg-[#333333f0] text-white p-4">
         <h1 class="text-3xl font-bold"><a href="/">Home</a></h1>
-        <div class="flex gap-3">
-            <a class="block mt-4 hover:underline" href="{{ route('employee.index') }}">Employes</a>
-            <a class="block mt-4 hover:underline" href="{{ route('project.index') }}">Projets</a>
-            <a class="block mt-4 hover:underline" href="{{ route('tache.index') }}">Taches</a>
+        <div class="flex justify-between items-center mt-4">
+            <div class="flex gap-3">
+                <a class="block hover:underline" href="{{ route('employee.index') }}">Employes</a>
+                <a class="block hover:underline" href="{{ route('project.index') }}">Projets</a>
+                <a class="block hover:underline" href="{{ route('tache.index') }}">Taches</a>
+            </div>
+            <form action="{{ route('logout') }}" method="post" class="h-full">
+                @csrf
+                <button class="hover:underline">logout</button>
+            </form>
         </div>
     </header>
 
