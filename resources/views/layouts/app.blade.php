@@ -35,18 +35,20 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <!-- Add links to your routes here -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('employee.index') }}">Employees</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('project.index') }}">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('tache.index') }}">Taches</a>
-                        </li>
-                    </ul>
+                    @auth
+                        <ul class="navbar-nav me-auto">
+                            <!-- Add links to your routes here -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('employee.index') }}">Employees</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('project.index') }}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('tache.index') }}">Taches</a>
+                            </li>
+                        </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

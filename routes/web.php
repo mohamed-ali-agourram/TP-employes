@@ -20,6 +20,6 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('employee', EmployeeController::class);
-Route::resource('project', ProjectController::class);
-Route::resource('tache', TacheController::class);
+Route::resource('employee', EmployeeController::class)->middleware("auth");
+Route::resource('project', ProjectController::class)->middleware("auth");
+Route::resource('tache', TacheController::class)->middleware("auth");
